@@ -2,37 +2,174 @@
 layout: default
 title: Home
 ---
+<!DOCTYPE html>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    {{ post.content }}
+  <title>
+    
+      Aiyaz Mak &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/resume/public/css/poole.css">
+  <link rel="stylesheet" href="/resume/public/css/syntax.css">
+  <link rel="stylesheet" href="/resume/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resume/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/resume/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>
+  .page.resume {
+    font-family: 'Lora', serif;
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    max-width: 32rem;
+}
+  
+  .resume .experience p strong {
+    font-size: 14px;
+}
+
+.resume em {
+    font-family: 'Open Sans', sans-serif;
+    color: #999;
+    font-size: 10px;
+    font-style: normal;
+}
+  
+  </style>
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Think outisde the box!</p>
   </div>
-  {% endfor %}
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/resume/">Home</a>
+   
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+
+    
+    
+
+
+    <a class="sidebar-nav-item" href="/">Home</a>
+    <a class="sidebar-nav-item" href="https://github.com/aiyazmak">Code</a>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+
+
+      <div class="container content">
+        <div class="posts">
+  
+</div>
+      <div class="container content">
+  <div class="page resume">
+    <p>
+ <i>"When something is important enough, you do it even if odds are not in your favor"</i> — Elon Musk  <br>
+  Houston, Texas.
+</p>
+
+<h2>Work Experience</h2>
+<section class="experience">
+  <strong>Empyrean Benefits Solutions</strong>
+  <em>Sep 2017 - Present</em>
+  <p>
+    Business Systems Analyst
+  </p>
+  <p>
+    <ul>
+        <li>Works with Implementation and System Managers to configure core system platform to meet plan design specifications.</li> 
+    <li>Creates, executes, and maintains accurate and detailed test plans (unit, function, integration, and regression) for all new system functionality testing.</li>
+    <li>Research and analyzes issues, creating cases to conduct testing and place solutions to prevent further system issues. .</li>
+    <li>Leverages technology to automate ongoing processes and create the most efficient and stable delivery of services to clients.</li>
+    <li>Works closely with the Shared Services teams (COBRA, FSA, Service Center) to deliver quality results of ancillary services .</li>
+    <li>Identify, analyze, and interpret trends or patterns in complex data sets.</li>
+    <li>Analyzes and understands system requirements for implementation and ongoing work.</li>
+
+    </ul>
+    Skills acquired — MS SQL Server, Python, Advanced Excel, Project Management, Agile
+  </p>  
+</section>
+
+
+
+
+
+
+
+
+
+      </div>
 </div>
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
